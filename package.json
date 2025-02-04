@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules",
+    "clean": "turbo run clean && rm -rf **/node_modules && rm -rf **/.turbo && rm -rf **/dist && rm -rf **/.expo && rm -rf **/.next && rm -rf **/.cache",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
