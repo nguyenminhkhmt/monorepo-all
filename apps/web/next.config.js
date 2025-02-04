@@ -1,8 +1,11 @@
-const { withExpo } = require('@expo/next-adapter');
+import { withExpo } from '@expo/next-adapter';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    turbo: {}
+  },
   transpilePackages: [
     'ui',
     'app',
@@ -30,4 +33,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withExpo(nextConfig);
+export default withExpo(nextConfig);

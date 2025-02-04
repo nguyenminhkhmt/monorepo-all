@@ -1,7 +1,17 @@
 {
   "name": "ui",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.ts",
   "private": true,
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --max-warnings=0 --fix"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
+  }
 }

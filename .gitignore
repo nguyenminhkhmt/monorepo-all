@@ -38,3 +38,10 @@ yarn-error.log*
 
 # nativewind
 nativewind-env.d.ts
+
+# check-types
+*.tsbuildinfo
+
+# Other
+.vscode
+TODO.md

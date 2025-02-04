@@ -1,8 +1,4 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "nativewind-env.d.ts"
-  ]
+  "extends": "@repo/typescript-config/react-app.json",
+  "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts"]
 }
