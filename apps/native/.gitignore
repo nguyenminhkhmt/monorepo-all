@@ -1,5 +1,6 @@
 node_modules/
 .expo/
+.expo-shared/
 dist/
 npm-debug.*
 *.jks
@@ -12,3 +13,10 @@ web-build/
 
 # macOS
 .DS_Store
+
+# Expo
+expo-env.d.ts
+
+# Nativewind
+nativewind-env.d.ts
+
