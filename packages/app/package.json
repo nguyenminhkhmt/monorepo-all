@@ -1,7 +1,18 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "main": "index.ts",
+  "type": "module",
+  "main": "src/index.ts",
   "private": true,
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --max-warnings=0 --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
+  }
 }
