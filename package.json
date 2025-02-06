@@ -16,13 +16,15 @@
     "many:check": "manypkg check",
     "many:fix": "manypkg fix",
     "postinstall": "pnpm lint:ws",
-    "test": "jest",
-    "typecheck": "turbo typecheck"
+    "test": "jest --passWithNoTests",
+    "typecheck": "turbo typecheck",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@manypkg/cli": "^0.23.0",
     "@turbo/gen": "^2.4.0",
     "clsx": "^2.1.1",
+    "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "prettier": "^3.4.2",
     "tailwind-merge": "^3.0.1",

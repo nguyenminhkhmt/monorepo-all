@@ -10,7 +10,9 @@
     "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint . --max-warnings=0 --fix",
     "format": "prettier --check . --ignore-path ../../.gitignore",
-    "format:fix": "prettier --write . --ignore-path ../../.gitignore"
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore",
+    "test": "jest --passWithNoTests",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

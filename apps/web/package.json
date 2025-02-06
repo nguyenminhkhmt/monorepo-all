@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "clean": "git clean -xdf .turbo node_modules dist build .next",
     "format": "prettier --check . --ignore-path ../../.gitignore",
-    "format:fix": "prettier --write . --ignore-path ../../.gitignore"
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore",
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@expo/next-adapter": "^6",
