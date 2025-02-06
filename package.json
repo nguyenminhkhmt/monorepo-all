@@ -9,8 +9,8 @@
     "dev": "turbo dev --parallel",
     "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
     "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
-    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint": "turbo lint --continue -- --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "list-packages": "pnpm list -r",
     "many:check": "manypkg check",
@@ -20,8 +20,11 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
+    "@manypkg/cli": "^0.23.0",
+    "@turbo/gen": "^2.4.0",
     "clsx": "^2.1.1",
-    "prettier": "^3.1.1",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2",
     "tailwind-merge": "^3.0.1",
     "turbo": "^2.4.0",
     "typescript": "^5"
@@ -29,5 +32,16 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@9.15.4",
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/@mj/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
 }

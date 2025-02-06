@@ -1,10 +1,10 @@
-import { withExpo } from '@expo/next-adapter';
+import { withExpo } from '@expo/next-adapter'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    turbo: {}
+    turbo: {},
   },
   transpilePackages: [
     'ui',
@@ -12,25 +12,25 @@ const nextConfig = {
     'react-native',
     'react-native-web',
     'nativewind',
-    'react-native-css-interop'
+    'react-native-css-interop',
   ],
-  webpack: (config) => {
+  webpack: config => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
       // Transform all direct `react-native` imports to `react-native-web`
       'react-native$': 'react-native-web',
       'react-native/Libraries/Image/AssetRegistry':
-        'react-native-web/dist/cjs/modules/AssetRegistry' // Fix for loading images in web builds with Expo-Image
-    };
+        'react-native-web/dist/cjs/modules/AssetRegistry', // Fix for loading images in web builds with Expo-Image
+    }
     config.resolve.extensions = [
       '.web.js',
       '.web.jsx',
       '.web.ts',
       '.web.tsx',
-      ...config.resolve.extensions
-    ];
-    return config;
-  }
-};
+      ...config.resolve.extensions,
+    ]
+    return config
+  },
+}
 
-export default withExpo(nextConfig);
+export default withExpo(nextConfig)

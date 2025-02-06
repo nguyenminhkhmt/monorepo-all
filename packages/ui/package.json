@@ -1,17 +1,21 @@
 {
-  "name": "ui",
+  "name": "@repo/ui",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "private": true,
   "license": "ISC",
   "scripts": {
     "clean": "rm -rf node_modules",
     "lint": "eslint . --max-warnings=0",
-    "lint:fix": "eslint . --max-warnings=0 --fix"
+    "lint:fix": "eslint . --max-warnings=0 --fix",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*"
-  }
+  },
+  "prettier": "@repo/prettier-config"
 }

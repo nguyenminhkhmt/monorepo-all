@@ -1,18 +1,25 @@
 {
-  "name": "app",
-  "version": "1.0.0",
+  "name": "@repo/app",
+  "version": "0.1.0",
   "type": "module",
   "main": "src/index.ts",
   "private": true,
   "license": "ISC",
   "scripts": {
     "clean": "rm -rf node_modules",
-    "lint": "eslint . --max-warnings=0",
-    "lint:fix": "eslint . --max-warnings=0 --fix",
-    "type-check": "tsc --noEmit"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "format:fix": "prettier --write . --ignore-path ../../.gitignore"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*"
-  }
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*"
+  },
+  "prettier": "@repo/prettier-config"
 }

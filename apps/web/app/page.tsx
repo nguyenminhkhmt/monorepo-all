@@ -1,3 +1,3 @@
-'use client';
+'use client'
 
-export { Home as default } from 'app/screens/home';
+export { Home as default } from '@repo/app/src/screens/home'
