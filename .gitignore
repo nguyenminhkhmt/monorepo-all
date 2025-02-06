@@ -45,3 +45,6 @@ nativewind-env.d.ts
 # Other
 .vscode
 TODO.md
+
+# husky
+.husky

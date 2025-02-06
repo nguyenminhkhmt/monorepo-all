@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "expo start",
-    "test": "jest --watchAll",
+    "test": "jest --passWithNoTests",
     "typecheck": "tsc --noEmit"
   },
   "jest": {
